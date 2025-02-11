@@ -206,12 +206,14 @@ body{
 }
 .search-con2{
     display:none;
-    padding-inline: 8px 13px;
+    padding-inline: 8px 12px;
     background-color:#1f1f1f;
     margin-inline-start: 8px;
     border-radius: 9999px;
     align-items: center;
     position: relative;
+    width: 100%;
+    max-width: 454px;
 }
 .search-con2 svg{
     display: block;
@@ -228,16 +230,18 @@ body{
     font-family: "Regular";
     color: #b3b3b3;
     margin-left: 8px;
-    width: 370px;
+    /* width: 370px; */
+    min-width: 180px;
     white-space: nowrap;
     display: block;
 }
 .cart{
-    padding-inline: 8px 0px;
+    padding-inline: 8px 10px;
     margin-left: 3px;
     border-left:1px solid #7c7c7c ;
+    position: absolute;
     top: 12px;
-    right: 0;
+    right:2px;
 }
 .cart svg{
     display: block;
@@ -1055,7 +1059,7 @@ footer{
     .h2-search{
         justify-content:end;
         flex: 1 1 100%;
-        margin-right: 84px;
+        margin-right: 85px;
     }
     .card-con img{
         min-inline-size: 213px;
@@ -1071,5 +1075,26 @@ footer{
     }
     .main-inner{
         padding: 0 24px;
+    }
+}
+@media screen and (min-width:1895px) {
+    .h2-search{
+        margin-right: 100px;
+    }
+    .spoty-con{
+        grid-template-columns: 22.05% 79.95%;
+    }
+    .nav-con{
+        height:85.3vh;
+    } 
+    .main-con{
+        height: 85.3vh;
+        padding-bottom: 42px;
+    } 
+    .card-con img{
+        min-inline-size: 218px;
+    }
+    #con-radio {
+        margin-top: -42px;
     }
 }
