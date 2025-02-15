@@ -167,6 +167,7 @@ body{
     display: flex;
     height: min-content;
     justify-content: flex-start;
+    position: relative;
 }
 .h2-search button{
     display: flex;
@@ -178,6 +179,17 @@ body{
     background: #1f1f1f;
     padding: 12px;
     border: none;
+    /* position: relative; */
+}
+ .title{
+    color: #fff;
+    background-color: #1f1f1f;
+    /* border: none; */
+    border-radius: 4px;
+    position:absolute;
+    top: 44px;
+    z-index: 5;
+    visibility: hidden;
 }
 .h2-search button svg{
     width: 24px;
@@ -595,7 +607,7 @@ nav{
 .main-con{
     display: block;
     box-sizing: border-box;
-    z-index: 99;
+    z-index: 2;
     overflow: hidden;
     border-radius: 4px;
     background-color:#121212;
@@ -1065,6 +1077,54 @@ footer{
         min-inline-size: 213px;
     }
 }
+@media screen  and (min-width:1824px) {
+    .h2-search{
+        margin-right: 52px;
+    }
+    .spoty-con{
+        grid-template-columns: 23.25% 76.75%;
+    }
+    .nav-con{
+        height:83.5vh;
+        border-radius: 8px;
+    } 
+    .main-con{
+        max-height: 83.5vh;
+        scrollbar-width: none;
+    } 
+    .card-con img{
+        min-inline-size: 202px;
+    }
+    #container-2-id {
+        margin-top: 0px;
+    }
+}
+@media screen  and (min-width:1825px) {
+    .h2-search{
+        margin-right: 67px;
+    }
+    .spoty-con{
+        grid-template-columns: 22.85% 77.15%;
+    }
+    .nav-con{
+        height:84.8vh;
+        border-radius: 8px;
+    } 
+    .main-con{
+        max-height: 84.8vh;
+        /* padding-bottom: 42px; */
+        scrollbar-width: none;
+    } 
+    .card-con img{
+        min-inline-size: 207px;
+    }
+    .container-1{
+        margin-left: 1px;
+    }
+    #container-2-id {
+        margin-top: 0px;
+    }
+}
 @media screen and (min-width:1890px) {
     .spoty-con{
         grid-template-columns: 22.4% 77.6%;
@@ -1086,10 +1146,12 @@ footer{
     }
     .nav-con{
         height:85.3vh;
+        border-radius: 8px;
     } 
     .main-con{
-        height: 85.3vh;
-        padding-bottom: 42px;
+        max-height: 85.3vh;
+        /* margin-right: 16px; */
+        /* padding-bottom: 42px; */
     } 
     .card-con img{
         min-inline-size: 218px;
@@ -1097,4 +1159,75 @@ footer{
     #con-radio {
         margin-top: -42px;
     }
+}
+/* hover */
+.h2-search button:hover{
+    background-color: #2a2a2a;
+    transform: scale(1.04);
+}
+.h2-search button:hover .title{
+    visibility: visible;
+}
+.nav-content-con .v-b-f:hover{
+    color: #fff;
+    transform: scale(1.04);
+}
+
+.nav-content-con a:hover{
+    transform: scale(1.04);
+}
+.nav-content-con a:hover  #d-svg svg{
+    fill: #fff;
+}
+.nav-content-con a:hover  #d-txt{
+    color: #fff;
+}
+.sign-in:hover{
+    transform: scale(1.04);
+} 
+.sign-in:hover span{
+    color: #fff;
+}
+.log:hover{
+    transform: scale(1.04);
+    background-color:#fff;
+    opacity: 0.95;
+}
+.h2-search[title] button:hover{
+    background-color: black;
+}
+
+.card-con a:hover{
+    text-decoration: underline;
+}
+.play-btn span:hover {
+    transform: scale(1.04);
+    background-color:#fff;
+    opacity: 0.95;
+}
+.nav-b-btn button:hover{
+    transform: scale(1.04);
+    border:1px solid #fff;
+}
+.cookies:hover{
+    text-decoration: underline;
+}
+.nav-t-h1 .nav-t-h1-1:hover{
+   color: #fff;
+}
+.nav-t-h1 .nav-t-h1-1 svg:hover{
+    fill: #fff;
+}
+.nav-t-h1 .nav-t-h1-2 svg:hover{
+    fill: #fff;
+    border-radius: 50%;
+    background: #2a2a2a;
+    padding: 4px;
+    margin-right: -4px;
+}
+.content-bottom a:hover{
+    background-color: rgb(114, 144, 144);
+}
+content:hover{
+    text-decoration: underline;
 }
